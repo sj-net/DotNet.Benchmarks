@@ -11,10 +11,11 @@ namespace Dotnet.Benchmarks
         static void Main(string[] args)
         {
 #if !DEBUG
-            BenchmarkRunner.Run<SystemTextJsonVsMessagePack>();
+            //BenchmarkRunner.Run<SystemTextJsonVsMessagePack>();
+            BenchmarkRunner.Run<SerialzationAndDeserialization>();
 #else 
 
-            var t = new Serialization().Json().Result;
+            var t = new SerialzationAndDeserialization().MessagePackSerialize();
 #endif
         }
     }
