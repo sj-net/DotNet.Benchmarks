@@ -12,7 +12,7 @@ namespace Dotnet.Benchmarks
         {
 #if !DEBUG
             //BenchmarkRunner.Run<SystemTextJsonVsMessagePack>();
-            BenchmarkRunner.Run<SerialzationAndDeserialization>();
+            BenchmarkRunner.Run<CostOfReflection>();
 #else 
 
             var t = new SerialzationAndDeserialization().MessagePackSerialize();
